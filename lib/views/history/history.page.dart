@@ -128,8 +128,10 @@ class _HistoryPageState extends State<HistoryPage> {
                                 onRefresh: _refreshData,
                                 child: viewModel.filteredUsers.isEmpty
                                     ? Center(
-                                        child: Lottie.asset(
-                                            'assets/emptyJson.json'))
+                                        child: Image.asset(
+                                        'assets/empty.png',
+                                        fit: BoxFit.cover,
+                                      ))
                                     : ListView(
                                         children: [
                                           QRCodeHistoryList(
@@ -143,8 +145,10 @@ class _HistoryPageState extends State<HistoryPage> {
                                 onRefresh: _refreshData,
                                 child: viewModel.filteredCheckInUser.isEmpty
                                     ? Center(
-                                        child: Lottie.asset(
-                                            'assets/emptyJson.json'))
+                                        child: Image.asset(
+                                        'assets/empty.png',
+                                        fit: BoxFit.cover,
+                                      ))
                                     : ListView(
                                         children: [
                                           QRCodeHistoryList(
@@ -159,8 +163,10 @@ class _HistoryPageState extends State<HistoryPage> {
                                 onRefresh: _refreshData,
                                 child: viewModel.filteredNotCheckIntUser.isEmpty
                                     ? Center(
-                                        child: Lottie.asset(
-                                            'assets/emptyJson.json'))
+                                        child: Image.asset(
+                                        'assets/empty.png',
+                                        fit: BoxFit.cover,
+                                      ))
                                     : ListView(
                                         children: [
                                           QRCodeHistoryList(
