@@ -71,7 +71,7 @@ class _ItemTicketQRState extends State<ItemTicketQR> {
                   ],
                 ),
                 trailing: Text(
-                  widget.user.isCheckin ? "QR đã quét" : "QR chưa quét",
+                  widget.user.isCheckin ? "Đã checkin" : "Chưa checkin",
                   style: TextStyle(
                       fontSize: AppFontSize.sizeSuperSmall,
                       color: widget.user.isCheckin == true

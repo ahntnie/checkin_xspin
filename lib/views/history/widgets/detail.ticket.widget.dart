@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:klok/base/base_page.dart';
 import 'package:klok/constants/app_color.dart';
@@ -107,8 +106,8 @@ class _DetailTicketState extends State<DetailTicket> {
                         SizedBox(height: 8),
                         Text(
                           widget.user.isCheckin == true
-                              ? "Quét thành công"
-                              : "Chưa quét",
+                              ? "Đã checkin"
+                              : "Chưa checkin",
                           style: TextStyle(
                             color: widget.user.isCheckin
                                 ? AppColor.successQRCode

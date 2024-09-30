@@ -1,7 +1,5 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:klok/constants/app_color.dart';
-import 'package:klok/constants/app_fontsize.dart';
 
 class BasePage extends StatefulWidget {
   final bool showLogo;

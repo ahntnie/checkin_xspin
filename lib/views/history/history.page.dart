@@ -56,7 +56,7 @@ class _HistoryPageState extends State<HistoryPage> {
           return DefaultTabController(
             length: 3, // Số lượng Tab
             child: BasePage(
-              title: 'Lịch sử quét QR Code',
+              title: 'Lịch sử Checkin',
               body: Column(
                 children: [
                   TabBar(
@@ -66,19 +66,19 @@ class _HistoryPageState extends State<HistoryPage> {
                       Tab(
                         child: Text(
                           'Tất cả',
-                          style: TextStyle(fontSize: 16),
+                          style: TextStyle(fontSize: 14),
                         ),
                       ),
                       Tab(
-                        child: AutoScrollingText(
-                          text: 'Đã Checkin',
-                          style: TextStyle(fontSize: 16),
+                        child: Text(
+                          'Đã Checkin',
+                          style: TextStyle(fontSize: 14),
                         ),
                       ),
                       Tab(
-                        child: AutoScrollingText(
-                          text: 'Chưa Checkin',
-                          style: TextStyle(fontSize: 16),
+                        child: Text(
+                          'Chưa Checkin',
+                          style: TextStyle(fontSize: 14),
                         ),
                       ),
                     ],

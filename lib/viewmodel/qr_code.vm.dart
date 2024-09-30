@@ -7,7 +7,6 @@ import 'package:klok/model/user.model.dart';
 import 'package:klok/requests/history_user.requets.dart';
 import 'package:klok/requests/qrcode.request.dart';
 import 'package:klok/viewmodel/index.vm.dart';
-import 'package:klok/viewmodel/login.vm.dart';
 import 'package:klok/views/qr_code/widgets/success_qr.wiget.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:stacked/stacked.dart';

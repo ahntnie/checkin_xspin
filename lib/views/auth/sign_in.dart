@@ -1,17 +1,11 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:klok/app/app_sp.dart';
-import 'package:klok/app/app_sp_key.dart';
 import 'package:klok/constants/app_color.dart';
 import 'package:klok/constants/app_fontsize.dart';
 import 'package:klok/viewmodel/login.vm.dart';
 import 'package:klok/views/auth/widget/button.dart';
-import 'package:klok/views/home/home.page.dart';
-import 'package:klok/views/index/index.page.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:stacked/stacked.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 
 class SignInView extends StatefulWidget {
   const SignInView({super.key});
