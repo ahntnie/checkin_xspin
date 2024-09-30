@@ -17,52 +17,55 @@ class HomeNavigationBar extends StatefulWidget {
 class _HomeNavigationBarState extends State<HomeNavigationBar> {
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      type: BottomNavigationBarType.fixed,
-      backgroundColor: AppColor.primaryColor,
-      currentIndex: widget.currentIndex,
-      fixedColor: AppColor.extraColor,
-      unselectedItemColor: Colors.grey[600],
-      onTap: (index) async {
-        await widget.onTabSelected(index);
-      },
-      items: [
-        // BottomNavigationBarItem(
-        //   icon: Icon(Icons.home, size: 24),
-        //   label: 'Trang chủ',
-        // ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.history, size: 24),
-          label: 'Lịch sử',
+    return Container(
+      decoration: BoxDecoration(
+        border: Border(
+          top: BorderSide(
+            color: Colors.transparent
+                .withOpacity(0.1), // Hoặc màu mong muốn cho gạch ngang
+            width: 1.0, // Độ rộng của gạch ngang
+          ),
         ),
-        BottomNavigationBarItem(
-          icon: Container(
-            decoration: BoxDecoration(
-              color: AppColor.selectColor, // Màu nền xung quanh icon
-              shape: BoxShape.circle, // Hình dạng vòng tròn
-              // borderRadius: BorderRadius.circular(10) // Hình dạng vòng tròn
-            ),
-            padding: EdgeInsets.all(
-                8.0), // Khoảng cách giữa icon và viền của vòng tròn
-            child: Center(
-              child: Icon(
-                Icons.qr_code,
-                color: Colors.white, // Màu của icon
-                size: 30.0, // Kích thước icon
+      ),
+      child: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: AppColor.extraColor,
+        currentIndex: widget.currentIndex,
+        fixedColor: AppColor.primaryColor,
+        unselectedItemColor: Colors.grey[600],
+        onTap: (index) async {
+          await widget.onTabSelected(index);
+        },
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.history, size: 24),
+            label: 'Lịch sử',
+          ),
+          BottomNavigationBarItem(
+            icon: Container(
+              decoration: BoxDecoration(
+                color: AppColor.selectColor, // Màu nền xung quanh icon
+                shape: BoxShape.circle, // Hình dạng vòng tròn
+                // borderRadius: BorderRadius.circular(10) // Hình dạng vòng tròn
+              ),
+              padding: EdgeInsets.all(
+                  8.0), // Khoảng cách giữa icon và viền của vòng tròn
+              child: Center(
+                child: Icon(
+                  Icons.qr_code,
+                  color: Colors.white, // Màu của icon
+                  size: 30.0, // Kích thước icon
+                ),
               ),
             ),
+            label: '',
           ),
-          label: '',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.person, size: 24),
-          label: 'Thông tin',
-        ),
-        // BottomNavigationBarItem(
-        //   icon: Icon(Icons.menu),
-        //   label: 'Khác',
-        // )
-      ],
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person, size: 24),
+            label: 'Thông tin',
+          ),
+        ],
+      ),
     );
 
     // return CurvedNavigationBar(

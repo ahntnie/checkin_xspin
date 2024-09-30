@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:klok/app/app_sp.dart';
+import 'package:klok/app/app_sp_key.dart';
 import 'package:klok/base/base_page.dart';
 import 'package:klok/constants/app_color.dart';
 import 'package:klok/constants/app_fontsize.dart';
@@ -55,7 +57,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   child: Center(
                     child: Column(
                       children: [
-                        const SizedBox(height: 30),
+                        const SizedBox(height: 20),
                         Text(
                           "Số người đã checkin",
                           style: TextStyle(
@@ -99,6 +101,25 @@ class _ProfilePageState extends State<ProfilePage> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
+                              Text(
+                                'Mã sự kiện',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: AppFontSize.sizeSmall,
+                                ),
+                              ),
+                              const SizedBox(height: 10),
+                              Card(
+                                  color: AppColor.extraColor.withOpacity(0.85),
+                                  elevation: 4.0,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                  child: ListTile(
+                                      leading: const Icon(Icons.account_circle),
+                                      title: Text(
+                                          '${AppSP.get(AppSPKey.tenTK)}'))),
+                              SizedBox(height: 20),
                               Text(
                                 'Tên sự kiện',
                                 style: TextStyle(
@@ -179,7 +200,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                   ],
                                 ),
                               ),
-                              const SizedBox(height: 10),
+                              const SizedBox(height: 20),
                               // Row(
                               //   mainAxisAlignment:
                               //       MainAxisAlignment.spaceBetween,
@@ -230,9 +251,9 @@ class _ProfilePageState extends State<ProfilePage> {
                               //       : CrossFadeState.showFirst,
                               //   duration: Duration(milliseconds: 200),
                               // ),
-                              SizedBox(
-                                height: 30,
-                              ),
+                              // SizedBox(
+                              //   height: 30,
+                              // ),
                               Center(
                                 child: SizedBox(
                                   width:
