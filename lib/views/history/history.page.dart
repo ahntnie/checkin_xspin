@@ -91,23 +91,28 @@ class _HistoryPageState extends State<HistoryPage> {
                     child: TextField(
                       controller: _searchController,
                       decoration: InputDecoration(
-                        hintText: 'Tìm kiếm theo tên hoặc mã QR',
-                        border: OutlineInputBorder(
-                          borderSide: BorderSide(
-                            color:
-                                AppColor.primaryColor, // Màu viền của TextField
+                          hintText: 'Tìm kiếm theo tên hoặc mã QR',
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: AppColor
+                                  .primaryColor, // Màu viền của TextField
+                            ),
                           ),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                            color: AppColor
-                                .primaryColor, // Màu viền khi TextField được chọn
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: AppColor
+                                  .primaryColor, // Màu viền khi TextField được chọn
+                            ),
                           ),
-                        ),
-                        prefixIcon: Icon(
-                          Icons.search,
-                        ),
-                      ),
+                          prefixIcon: Icon(
+                            Icons.search,
+                          ),
+                          suffixIcon: IconButton(
+                            icon: Icon(Icons.close),
+                            onPressed: () {
+                              _searchController.clear();;
+                            },
+                          )),
                     ),
                   ),
                   viewModel.isBusy
